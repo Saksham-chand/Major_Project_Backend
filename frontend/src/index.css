@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --bg: #f8f5f0;
+  --bg-input: #fff;
+  --bg-card: #fff;
+  --bg-chip: #ebe5dc;
+  --text: #2c2419;
+  --text-muted: #6b5d4f;
+  --border: #d4c9b8;
+  --accent: #8b5a2b;
+  --accent-dark: #6d4420;
+  --soil-excellent: #15803d;
+  --soil-good: #16a34a;
+  --soil-moderate: #ca8a04;
+  --soil-poor: #dc2626;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}

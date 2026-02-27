@@ -1,13 +1,22 @@
 import joblib
 import numpy as np
 import os
+import logging
 from app.soil_engine import compute_soil_health
 
+logger = logging.getLogger(__name__)
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH = os.path.join(BASE_DIR, "models")
 
 crop_model = joblib.load(os.path.join(MODEL_PATH, "crop_model.pkl"))
-yield_model = joblib.load(os.path.join(MODEL_PATH, "yield_model.pkl"))
+
+try:
+    yield_model = joblib.load(os.path.join(MODEL_PATH, "yield_model.pkl"))
+    _yield_available = True
+except Exception as e:
+    logger.warning("Yield model unavailable (install libomp on Mac: brew install libomp): %s", e)
+    yield_model = None
+    _yield_available = False
 
 
 def predict_crop(data):
@@ -39,6 +48,8 @@ def predict_crop(data):
 
 
 def predict_yield(data):
+    if not _yield_available:
+        return 0.0
 
     features = np.array([[
         data.N,
