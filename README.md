@@ -1,4 +1,30 @@
-# AgriSmart – Soil Analysis & Crop Recommendations
+Create a modern standalone React UI for an agriculture-based suggestion app called "AgriSmart".
+
+Requirements:
+- Use Tailwind CSS
+- Clean, minimal, modern design
+- Earthy color palette (green, brown, beige)
+- Mobile responsive
+
+Main Sections:
+1. Top Navbar with logo and weather info
+2. Sidebar with:
+   - Dashboard
+   - Crop Recommendation
+   - Soil Analysis
+   - Weather Forecast
+   - Market Prices
+3. Main Dashboard showing:
+   - Weather card
+   - Soil health card
+   - Crop suggestion card
+   - Market price trends (chart)
+4. Use cards with soft shadows and rounded corners
+5. Include icons from lucide-react
+6. Use dummy data
+7. Make it a single file React component
+
+Design vibe: Clean AgriTech startup UI# AgriSmart – Soil Analysis & Crop Recommendations
 
 ML-powered agricultural analysis: crop recommendations, yield prediction, soil health, and fertilizer suggestions.
 

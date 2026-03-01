@@ -1,30 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+@import "tailwindcss";
 
-:root {
-  --bg: #f8f5f0;
-  --bg-input: #fff;
-  --bg-card: #fff;
-  --bg-chip: #ebe5dc;
-  --text: #2c2419;
-  --text-muted: #6b5d4f;
-  --border: #d4c9b8;
-  --accent: #8b5a2b;
-  --accent-dark: #6d4420;
-  --soil-excellent: #15803d;
-  --soil-good: #16a34a;
-  --soil-moderate: #ca8a04;
-  --soil-poor: #dc2626;
+@theme {
+  --color-earth-50: #f7f5f0;
+  --color-earth-100: #ebe7dc;
+  --color-earth-200: #d4c9b8;
+  --color-earth-300: #b8a88a;
+  --color-earth-400: #9c8b6a;
+  --color-earth-500: #7d6b4a;
+  --color-earth-600: #5c4d36;
+  --color-earth-700: #3d3424;
+  --color-earth-800: #2a231a;
+  --color-earth-900: #1a1712;
+  --color-earth-950: #0f0d0a;
+  --color-sage-50: #f0f5ee;
+  --color-sage-100: #dde8d9;
+  --color-sage-200: #b8d4ae;
+  --color-sage-300: #7fb86e;
+  --color-sage-400: #4d8b3d;
+  --color-sage-500: #2d6b20;
+  --color-sage-600: #23561a;
+  --color-sage-700: #1a4013;
+  --color-sage-900: #0f2e0d;
+  --color-sage-950: #081a07;
 }
 
-* {
-  box-sizing: border-box;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
-  margin: 0;
-  font-family: 'DM Sans', system-ui, sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+  @apply bg-earth-50 dark:bg-earth-950 text-earth-800 dark:text-earth-100;
 }
