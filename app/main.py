@@ -82,6 +82,10 @@ if FRONTEND_DIST.exists():
 
     app.mount("/assets", StaticFiles(directory=FRONTEND_DIST / "assets"), name="assets")
 
+    @app.get("/vite.svg")
+    def serve_favicon():
+        return FileResponse(FRONTEND_DIST / "vite.svg")
+
     @app.get("/")
     def serve_app():
         return FileResponse(FRONTEND_DIST / "index.html")
